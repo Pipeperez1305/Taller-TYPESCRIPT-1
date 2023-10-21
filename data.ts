@@ -21,19 +21,19 @@ export const series = [
 
 console.log(series);
 
-    function darPromedioSeasons():number{
+function darPromedioSeasons():number{
     let totalSeasons: number=0;
     let totalSeries: number=0;
-    for (let index = 0; index < series.length; index++){
-        let serie: Serie = series[index];
+    for (const element of series){
+        let serie: Serie = element;
         totalSeries+=1;
         totalSeasons+= serie.seasons;
     }
     let promedio: number=(totalSeasons/totalSeries);
     return promedio;
-   }
+}
 
-let serieDescriptionTable: HTMLElement= document.getElementById("serie")!;
+
 let averageTable: HTMLElement= document.getElementById("promedio")!;
 let seriesTable: HTMLElement= document.getElementById("series")!;
 mostrarPromedio();
