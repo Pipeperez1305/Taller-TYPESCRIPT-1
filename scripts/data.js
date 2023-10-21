@@ -24,11 +24,6 @@ var averageTable = document.getElementById("promedio");
 var seriesTable = document.getElementById("series");
 mostrarPromedio();
 mostrarSeries();
-function mostrarInfoSerie(serie) {
-    var tbodySerie = document.createElement("tbody");
-    tbodySerie.innerHTML = "<div class=\"card mb-3\">\n     <img src=\"".concat(serie.imagen, "\" class=\"card-img-top my-3\" alt=\"...\">\n     <div class=\"card-body\">\n       <h5 class=\"card-title\">").concat(serie.name, "</h5>\n       <p class=\"card-text\">").concat(serie.description, "</p>\n       <p><a href=\"").concat(serie.enlace, "\">https://www.amc.com/shows/breaking-bad</a>.</p>\n     </div>\n </div>");
-    serieDescriptionTable.appendChild(tbodySerie);
-}
 function mostrarPromedio() {
     var promedioSeasons = darPromedioSeasons();
     var trElement = document.createElement("tr");
