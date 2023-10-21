@@ -39,19 +39,6 @@ let seriesTable: HTMLElement= document.getElementById("series")!;
 mostrarPromedio();
 mostrarSeries();
 
-function mostrarInfoSerie(serie: Serie):void{
-    let tbodySerie = document.createElement("tbody");
-    tbodySerie.innerHTML=`<div class="card mb-3">
-     <img src="${serie.imagen}" class="card-img-top my-3" alt="...">
-     <div class="card-body">
-       <h5 class="card-title">${serie.name}</h5>
-       <p class="card-text">${serie.description}</p>
-       <p><a href="${serie.enlace}">https://www.amc.com/shows/breaking-bad</a>.</p>
-     </div>
- </div>`
-     serieDescriptionTable.appendChild(tbodySerie);
-}
-
 
 function mostrarPromedio():void{
     let promedioSeasons:number= darPromedioSeasons();
